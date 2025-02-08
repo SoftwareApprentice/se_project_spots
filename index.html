@@ -3,17 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spots landing page." />
+    <meta name="keywords" content="HTML, CSS, Technical" />
+    <meta name="author" content="Aaron Liang" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="favicon" href="./favicon.ico" />
+    <link rel="favicon" type="image/x-icon" href="./favicon.ico" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
-      <menu class="menu"
-        ><img src="images/Logo.svg" alt="icon" class="menu__image" />
-      </menu>
-      <header class="header"></header>
-      <main class="cards"></main>
+      <header class="header">
+        <img src="images/Logo.svg" alt="Spot Logo" class="header__logo" />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img src="./images/avatar.jpg" alt="Bessie Coleman Avatar" class="profile__avatar" />
+          <div class="profile__column">
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
+            <button class="profile__edit-btn">
+              <img src="./images/penicl.svg" alt="pencil logo"></img><span>Edit Profile</span>
+            </button>
+          </div>
+          <button class="profile__add-btn">
+            <img src="./images/plus.svg" alt="plus sign logo" class="profile__add-icon"><span>New Post</span>
+          </button>
+        </section>
+        <section class="cards page__section"></section>
+      </main>
       <footer class="footer"></footer>
     </div>
   </body>
