@@ -20,10 +20,10 @@
 .card__title {
   color: #212121;
   margin: 0;
-  font-family: "Poppins", "Arial", sans-serif;
+  font-family: "Poppins-Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .card__like-btn {
