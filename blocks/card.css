@@ -1,5 +1,4 @@
 .card {
-  max-width: 413px;
   height: 445px;
 }
 
@@ -18,12 +17,16 @@
 }
 
 .card__title {
+  max-width: 353px;
   color: #212121;
   margin: 0;
   font-family: "Poppins-Medium", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card__like-btn {
@@ -33,4 +36,18 @@
   background-color: transparent;
   border: none;
   opacity: 0.4;
+}
+
+@media screen and (max-width: 627px) {
+  .card {
+    height: 318px;
+  }
+
+  .card__image {
+    height: 288px;
+  }
+
+  .card__title {
+    max-width: 252px;
+  }
 }
