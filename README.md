@@ -4,6 +4,10 @@
 
 [Spots Site](https://softwareapprentice.github.io/se_project_spots/)
 
+## Website Video Explanation
+
+[Video Documentation](https://www.loom.com/share/2fdc81a7d09c41a6b9c09e4c839bc8ca)
+
 ### Overview
 
 - Description
