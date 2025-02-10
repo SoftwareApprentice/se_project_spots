@@ -9,6 +9,7 @@
   height: 190px;
   margin-right: 20px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .profile__column {
@@ -59,6 +60,10 @@
   padding: 0;
 }
 
+.profile__edit-btn:hover {
+  cursor: pointer;
+}
+
 .profile__edit-btn span {
   color: #212121;
   font-family: "Poppins-Medium", "Arial", sans-serif;
@@ -84,6 +89,10 @@
   gap: 8px;
 }
 
+.profile__add-btn:hover {
+  cursor: pointer;
+}
+
 .profile__add-btn span {
   color: #fcf5e5;
   font-family: "Poppins-Medium", "Arial", sans-serif;
@@ -100,7 +109,7 @@
 
 @media screen and (max-width: 627px) {
   .profile {
-    width: 288px;
+    width: 100%;
     padding: 20px 0 20px;
     flex-direction: column;
     align-items: center;
@@ -120,10 +129,12 @@
   .profile__name {
     font-size: 20px;
     margin: 0 0 6px;
+    text-align: center;
   }
 
   .profile__description {
     margin: 0 0 32px;
+    text-align: center;
   }
 
   .profile__add-btn {
