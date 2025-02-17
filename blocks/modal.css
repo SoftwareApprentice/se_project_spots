@@ -62,9 +62,6 @@
   vertical-align: middle;
 }
 
-.modal__form {
-}
-
 @media screen and (max-width: 627px) {
   .modal {
     padding: 10px;
