@@ -57,3 +57,22 @@ function handleProfileFormSubmit(evt) {
 }
 
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+const cardContainer = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+  const cardElement = document
+    .querySelector("#card-template")
+    .content.cloneNode(true);
+  const cardTitle = cardElement.querySelector(".card__title");
+  const cardImage = cardElement.querySelector(".card__image");
+
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  cardTitle.textContent = data.name;
+  return cardElement;
+}
+
+for (let i = 0; i < initialCards.length; i++) {
+  cardContainer.append(getCardElement(initialCards[i]));
+}
