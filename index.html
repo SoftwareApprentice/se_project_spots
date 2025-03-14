@@ -72,7 +72,11 @@
         <div class="modal__container">
           <div class="modal__row">
             <h2 class="modal__title">Edit profile</h2>
-            <button type="button" class="modal__button-close">
+            <button
+              type="button"
+              class="modal__button-close"
+              id="profile-close-button"
+            >
               <img
                 src="./images/Close-Icon.png"
                 alt="close icon"
@@ -80,7 +84,7 @@
               />
             </button>
           </div>
-          <form name="edit-profile" class="form modal__form" id="profile-form">
+          <form name="profile-form" class="form modal__form" id="profile-form">
             <label for="name" class="form__label"
               >Name
               <input
@@ -96,6 +100,48 @@
                 type="text"
                 id="description"
                 placeholder="Describe yourself"
+                class="form__input"
+              />
+            </label>
+            <button type="submit" class="form__button-save">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal" id="add-card-modal">
+        <div class="modal__container">
+          <div class="modal__row">
+            <h2 class="modal__title">New post</h2>
+            <button
+              type="button"
+              class="modal__button-close"
+              id="add-card-close-button"
+            >
+              <img
+                src="./images/Close-Icon.png"
+                alt="close icon"
+                class="modal__close-icon"
+              />
+            </button>
+          </div>
+          <form name="post-form" class="form modal__form" id="add-card-form">
+            <label for="add-card-link-input" class="form__label"
+              >Image link
+              <input
+                type="url"
+                id="add-card-link-input"
+                name="link"
+                placeholder="Paste a link to the picture"
+                class="form__input"
+              />
+            </label>
+            <label for="add-card-name-input" class="form__label"
+              >Caption
+              <input
+                type="text"
+                id="add-card-name-input"
+                name="name"
+                placeholder="Type your caption"
                 class="form__input"
               />
             </label>
