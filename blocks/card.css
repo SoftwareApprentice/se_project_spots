@@ -1,5 +1,6 @@
 .card {
   min-height: 445px;
+  position: relative;
 }
 
 .card__image {
@@ -9,6 +10,21 @@
   border-radius: 8px;
   margin-bottom: 12px;
   display: block;
+}
+
+.card__delete-btn {
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/trashcan.svg);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.card__delete-btn:hover {
+  background-image: url(../images/trashcanHover.svg);
 }
 
 .card__content {
@@ -42,6 +58,18 @@
   opacity: 1;
   cursor: pointer;
 }
+
+.card__like-btn_liked {
+  background-image: url(../images/Union.svg);
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.card__like-btn_liked:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 627px) {
   .card {
     min-height: 318px;

@@ -68,7 +68,9 @@ function handlePostFormSubmit(evt) {
     name: captionInput.value,
     link: imageInput.value,
   };
-  cardContainer.append(getCardElement(post));
+  cardContainer.prepend(getCardElement(post));
+  captionInput.value = "";
+  imageInput.value = "";
   closeModal(modalPost);
 }
 
@@ -78,10 +80,20 @@ function getCardElement(data) {
     .content.cloneNode(true);
   const cardTitle = cardElement.querySelector(".card__title");
   const cardImage = cardElement.querySelector(".card__image");
+  const cardLikeButton = cardElement.querySelector(".card__like-btn");
+  const cardDeleteButton = cardElement.querySelector(".card__delete-btn");
 
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
+  cardLikeButton.addEventListener("click", () =>
+    cardLikeButton.classList.toggle("card__like-btn_liked")
+  );
+
+  cardDeleteButton.addEventListener("click", () =>
+    cardDeleteButton.closest(".card").remove()
+  );
+
   return cardElement;
 }
 

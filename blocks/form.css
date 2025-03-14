@@ -47,6 +47,7 @@
 }
 
 .form__button-save:hover {
+  cursor: pointer;
   opacity: 0.8;
 }
 
