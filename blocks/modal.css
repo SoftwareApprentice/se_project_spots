@@ -21,9 +21,9 @@
 }
 
 .modal__content {
+  box-sizing: border-box;
   width: 100%;
   max-width: 730px;
-  box-sizing: border-box;
   background-color: #fff;
   border-radius: 8px;
   padding: 32px 50px;
@@ -103,6 +103,10 @@
   width: fit-content;
   padding: 4px 8px;
   border-radius: 8px;
+  font-family: "Poppins-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 627px) {
@@ -126,5 +130,9 @@
   .modal__button-close_type_preview {
     top: -48px;
     right: 0;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 }
