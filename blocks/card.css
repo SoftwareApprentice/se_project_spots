@@ -28,6 +28,7 @@
 }
 
 .card__delete-btn:hover {
+  cursor: pointer;
   background-image: url(../images/trashcanHover.svg);
 }
 

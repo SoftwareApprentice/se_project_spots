@@ -29,7 +29,6 @@
   padding: 32px 50px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
   position: relative;
 }
 
@@ -38,6 +37,10 @@
   background-color: transparent;
   padding: 0;
   gap: 0;
+}
+
+.modal__form {
+  margin-top: 32px;
 }
 
 .modal__row {
@@ -114,9 +117,16 @@
     padding: 10px;
   }
 
-  .modal__container {
+  .modal__content {
     padding: 12px;
-    gap: 24px;
+  }
+
+  .modal__content_type_preview {
+    padding: 0;
+  }
+
+  .modal__form {
+    margin-top: 24px;
   }
 
   .modal__title {
