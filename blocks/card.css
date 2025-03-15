@@ -12,6 +12,10 @@
   display: block;
 }
 
+.card__image {
+  cursor: pointer;
+}
+
 .card__delete-btn {
   width: 32px;
   height: 32px;

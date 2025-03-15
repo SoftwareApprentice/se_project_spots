@@ -23,6 +23,10 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
+  {
+    name: "Golden Gate Bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 ];
 
 //edit-profile
@@ -46,6 +50,12 @@ const postCloseButton = modalPost.querySelector(".modal__button-close");
 const postFormElement = modalPost.querySelector(".modal__form");
 const imageInput = postFormElement.querySelector("#add-card-link-input");
 const captionInput = postFormElement.querySelector("#add-card-name-input");
+
+//preview elements
+const modalPreview = document.querySelector(".modal_type_preview");
+const previewImage = modalPreview.querySelector(".modal__image");
+const previewCaption = modalPreview.querySelector(".modal__caption");
+const previewCloseButton = modalPreview.querySelector(".modal__button-close");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -86,6 +96,15 @@ function getCardElement(data) {
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
+
+  //open modal on image
+  cardImage.addEventListener("click", () => {
+    previewImage.src = cardImage.src;
+    previewImage.alt = cardTitle.textContent;
+    previewCaption.textContent = cardTitle.textContent;
+    modalPreview.classList.add("modal_opened");
+  });
+
   cardLikeButton.addEventListener("click", () =>
     cardLikeButton.classList.toggle("card__like-btn_liked")
   );
@@ -112,5 +131,7 @@ newPostButton.addEventListener("click", () => openModal(modalPost));
 postCloseButton.addEventListener("click", () => closeModal(modalPost));
 
 postFormElement.addEventListener("submit", handlePostFormSubmit);
+
+previewCloseButton.addEventListener("click", () => closeModal(modalPreview));
 
 initialCards.forEach((card) => cardContainer.append(getCardElement(card)));

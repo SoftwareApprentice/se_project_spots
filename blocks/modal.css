@@ -76,7 +76,7 @@
 }
 
 .modal__button-close_type_preview:hover {
-  opacity: 0.4;
+  background-image: url(../images/Close-Icon-preview-hover.svg);
 }
 
 .modal__close-icon {
@@ -89,6 +89,7 @@
   max-height: 80vh;
   object-fit: contain;
   margin-bottom: 8px;
+  border-radius: 8px;
 }
 
 .modal__caption {
