@@ -60,7 +60,7 @@ const previewImage = modalPreview.querySelector(".modal__image");
 const previewCaption = modalPreview.querySelector(".modal__caption");
 const previewCloseButton = modalPreview.querySelector(".modal__button-close");
 
-function escapeModal(evt) {
+function handleEscape(evt) {
   if (evt.key === "Escape") {
     const modal = document.querySelector(".modal_opened");
     closeModal(modal);
@@ -68,9 +68,8 @@ function escapeModal(evt) {
 }
 
 function clickOutModal(evt) {
-  const modal = document.querySelector(".modal_opened");
   if (evt.target.classList.contains("modal_opened")) {
-    closeModal(modal);
+    closeModal(evt.target);
   }
 }
 
