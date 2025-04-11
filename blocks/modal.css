@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.modal__form {
+  margin-top: 32px;
+}
+
 .modal_opened {
   visibility: visible;
   opacity: 1;
@@ -117,16 +121,16 @@
     padding: 10px;
   }
 
+  .modal__form {
+    margin-top: 24px;
+  }
+
   .modal__content {
     padding: 12px;
   }
 
   .modal__content_type_preview {
     padding: 0;
-  }
-
-  .modal__form {
-    margin-top: 24px;
   }
 
   .modal__title {

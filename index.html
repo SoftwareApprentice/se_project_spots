@@ -64,6 +64,7 @@
             </template>
           </ul>
         </section>
+        <script defer src="./scripts/validation.js"></script>
         <script defer src="./scripts/index.js"></script>
       </main>
       <footer class="footer">
@@ -85,7 +86,12 @@
               />
             </button>
           </div>
-          <form name="profile-form" class="form modal__form" id="profile-form">
+          <form
+            name="profile-form"
+            class="form modal__form"
+            id="profile-form"
+            novalidate
+          >
             <label for="name" class="form__label"
               >Name
               <input
@@ -93,7 +99,11 @@
                 id="name"
                 placeholder="Type your name"
                 class="form__input"
+                minlength="2"
+                maxlength="40"
+                required
               />
+              <span id="name-error" class=""></span>
             </label>
             <label for="description" class="form__label"
               >Description
@@ -102,7 +112,11 @@
                 id="description"
                 placeholder="Describe yourself"
                 class="form__input"
+                minlength="2"
+                maxlength="200"
+                required
               />
+              <span id="description-error" class=""></span>
             </label>
             <button type="submit" class="form__button-save">Save</button>
           </form>
@@ -121,7 +135,12 @@
               />
             </button>
           </div>
-          <form name="post-form" class="form modal__form" id="add-card-form">
+          <form
+            name="post-form"
+            class="form modal__form"
+            id="add-card-form"
+            novalidate
+          >
             <label for="add-card-link-input" class="form__label"
               >Image link
               <input
@@ -130,7 +149,9 @@
                 name="link"
                 placeholder="Paste a link to the picture"
                 class="form__input"
+                required
               />
+              <span id="add-card-link-input-error" class=""></span>
             </label>
             <label for="add-card-name-input" class="form__label"
               >Caption
@@ -140,7 +161,11 @@
                 name="name"
                 placeholder="Type your caption"
                 class="form__input"
+                minlength="2"
+                maxlength="30"
+                required
               />
+              <span id="add-card-name-input-error" class=""></span>
             </label>
             <button type="submit" class="form__button-save">Save</button>
           </form>
