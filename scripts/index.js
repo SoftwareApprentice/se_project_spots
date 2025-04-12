@@ -75,13 +75,13 @@ function clickOutModal(evt) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  document.addEventListener("keydown", escapeModal);
+  document.addEventListener("keydown", handleEscape);
   document.addEventListener("click", clickOutModal);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", escapeModal);
+  document.removeEventListener("keydown", handleEscape);
   document.removeEventListener("click", clickOutModal);
 }
 
