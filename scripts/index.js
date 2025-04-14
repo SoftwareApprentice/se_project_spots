@@ -102,7 +102,6 @@ function handlePostFormSubmit(evt) {
   renderCard(post, "prepend");
   evt.target.reset();
   closeModal(modalPost);
-  disableButton(postSubmitButton, settings);
 }
 
 function getCardElement(data) {
