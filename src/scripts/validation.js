@@ -1,6 +1,6 @@
 const forms = document.querySelectorAll(".modal__form");
 
-const settings = {
+export const validationConfig = {
   formSelector: ".form",
   inputSelector: ".form__input",
   submitButtonSelector: ".form__button-save",
@@ -47,7 +47,7 @@ const disableButton = (buttonElement, config) => {
   buttonElement.disabled = true;
 };
 
-const resetValidation = (formElement, inputList, config) => {
+export const resetValidation = (formElement, inputList, config) => {
   inputList.forEach((input) => hideInputError(formElement, input, config));
 };
 
@@ -79,11 +79,9 @@ const setEventListeners = (formElement, config) => {
   });
 };
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formElement) => {
     setEventListeners(formElement, config);
   });
 };
-
-enableValidation(settings);

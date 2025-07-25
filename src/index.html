@@ -6,19 +6,18 @@
     <meta name="description" content="Spots landing page." />
     <meta name="keywords" content="HTML, CSS, Technical" />
     <meta name="author" content="Aaron Liang" />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="images/Logo.svg" alt="Spot Logo" class="header__logo" />
+        <img id="image-logo" alt="Spot Logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            id="image-profile"
             alt="Bessie Coleman Avatar"
             class="profile__avatar"
           />
@@ -37,14 +36,12 @@
               influential figure in modern world
             </p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/penicl.svg" alt="pencil logo" /><span
-                >Edit Profile</span
-              >
+              <img id="image-edit" alt="pencil logo" /><span>Edit Profile</span>
             </button>
           </div>
           <button type="button" class="profile__add-btn">
             <img
-              src="./images/plus.svg"
+              id="image-add"
               alt="plus sign logo"
               class="profile__add-icon"
             /><span>New Post</span>
@@ -64,8 +61,6 @@
             </template>
           </ul>
         </section>
-        <script defer src="./scripts/validation.js"></script>
-        <script defer src="./scripts/index.js"></script>
       </main>
       <footer class="footer">
         <p class="footer__copyright">©2025 Aaron Liang</p>
@@ -80,7 +75,7 @@
               id="profile-close-button"
             >
               <img
-                src="./images/Close-Icon.png"
+                id="image-edit-close"
                 alt="close icon"
                 class="modal__close-icon"
               />
@@ -129,7 +124,7 @@
             <h2 class="modal__title">New post</h2>
             <button type="button" class="modal__button-close">
               <img
-                src="./images/Close-Icon.png"
+                id="image-add-close"
                 alt="close icon"
                 class="modal__close-icon"
               />

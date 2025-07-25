@@ -1,3 +1,13 @@
+//git spots-final branch test
+
+import {
+  enableValidation,
+  validationConfig,
+  resetValidation,
+} from "../scripts/validation.js";
+
+import "./index.css";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -28,7 +38,34 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
 ];
+//images
+import profilePicSrc from "../images/avatar.jpg";
 
+const profilePic = document.getElementById("image-profile");
+profilePic.src = profilePicSrc;
+
+import editPicSrc from "../images/penicl.svg";
+
+const editPic = document.getElementById("image-edit");
+editPic.src = editPicSrc;
+
+import logoPicSrc from "../images/Logo.svg";
+
+const logoPic = document.getElementById("image-logo");
+logoPic.src = logoPicSrc;
+
+import addPicSrc from "../images/plus.svg";
+
+const addPic = document.getElementById("image-add");
+addPic.src = addPicSrc;
+
+import closePicSrc from "../images/Close-Icon.png";
+
+const editClosePic = document.getElementById("image-edit-close");
+editClosePic.src = closePicSrc;
+
+const addClosePic = document.getElementById("image-add-close");
+addClosePic.src = closePicSrc;
 //edit-profile
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const newPostButton = document.querySelector(".profile__add-btn");
@@ -90,7 +127,7 @@ function handleProfileFormSubmit(evt) {
   profileNameElement.textContent = nameInput.value;
   profileJobElement.textContent = jobInput.value;
   closeModal(modalProfile);
-  disableButton(profileSubmitButton, settings);
+  disableButton(profileSubmitButton, validationConfig);
 }
 
 function handlePostFormSubmit(evt) {
@@ -144,7 +181,7 @@ function renderCard(cardData, method = "prepend") {
 profileEditButton.addEventListener("click", () => {
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
-  resetValidation(profileFormElement, [nameInput, jobInput], settings);
+  resetValidation(profileFormElement, [nameInput, jobInput], validationConfig);
   openModal(modalProfile);
 });
 
@@ -162,3 +199,5 @@ newPostButton.addEventListener("click", () => openModal(modalPost));
 postFormElement.addEventListener("submit", handlePostFormSubmit);
 
 initialCards.forEach((card) => renderCard(card, "append"));
+
+enableValidation(validationConfig);
